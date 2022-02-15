@@ -53,25 +53,27 @@
                     <div class="login-card form-container">
                         <h2 class="page-title welcome-font">Come Hike With Us!</h2>
 
-                        <form class="form -form">
-
-                            <div class="form-group">
-                                <label for="username-signup"></label>
-                                <input class="form-input" type="text" id="username-signup" onkeyup="checkForm()"
-                                    placeholder="Username" />
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
                             </div>
-
-                            <div class="form-group">
-                                <label for="password-signup"></label>
-                                <input class="form-input" type="password" id="password-signup" onkeyup="checkForm()"
-                                    placeholder="Password" />
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
                             </div>
-
-                            <div class="form-group">
-                                <button class="btn btn-info btn-block" type="submit" id="submit-btn">Lets Hike!</button>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
                             </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
+                    Already have an account? <a href="/">Log In</a>
+
                 </div>
             </div>
         </div>
