@@ -1,5 +1,5 @@
 {
-  "name": "tech-friends",
+  "name": "sike-hike",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -10,10 +10,11 @@
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Katlyn Boches, Florencia Ceballos, Joana Santoyo, and Hannah Franz",
+  "license": "MIT",
+  "homepage": "https://github.com/Katlyn627/Sike-Hike#readme",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "bootstrap": "^5.1.3"
   }
 }
