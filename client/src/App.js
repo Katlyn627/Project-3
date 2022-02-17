@@ -51,20 +51,26 @@ function App() {
                         <Route exact path="/">
                             <Home />
                         </Route>
-                        <Route exact path="/login">
+                        <Route exact path="/login" component={LogInForm} >
                             <Login />
                         </Route>
-                        <Route exact path="/signup">
+                        <Route exact path="/signup" component={SignUpFrom}>
                             <Signup />
                         </Route>
-                        <Route exact path="/profiles/:profileId">
+                        <Route exact path="/profile/:profileId" component={Profile}>
                             <Profile />
                         </Route>
-                        <Route exact path="/home">
-                            <Home />
-                        </Route>
-                        <Route exact path="/favorites">
+                        <Route exact path="/favorites" component={Favorites}>
                             <Favorites />
+                        </Route>
+                        <Route exact path="/commentform" component={CommentForm}>
+                            <CommentForm />
+                        </Route>
+                        <Route exact path="/commentlist" component={CommentList}>
+                            <CommentList />
+                        </Route>
+                        <Route exact path="/hikeform" component={HikeForm}>
+                            <HikeForm />
                         </Route>
                     </div>
                     <Footer />
