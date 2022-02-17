@@ -24,11 +24,7 @@ const typeDefs = gql`
     createdAt: String
   }
 
-  type Hike{
-  
-  
-  }
-
+ 
   type Auth {
     token: ID!
     user: User
