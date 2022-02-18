@@ -1,0 +1,38 @@
+[
+    {
+      "username": "John Smith",
+      "email": "jsmith@gmail.com",
+      "password": "password01"
+    },
+    {
+      "username": "Max Williams",
+      "email": "mwilliams@gmail.com",
+      "password": "password02"
+    },
+    {
+      "username": "Katlyn Boches",
+      "email": "kboches@gmail.com",
+      "password": "password03"
+    },
+    {
+      "username": "Florencia Ceballaos",
+      "email": "fceballaos@gmail.com",
+      "password": "password04"
+    },
+    {
+      "username": "Joana Santoyo",
+      "email": "jsantoyo@gmail.com",
+      "password": "password05"
+    },
+    {
+      "username": "Hannah Franz",
+      "email": "hfranz@mail.com",
+      "password": "password06"
+    },
+    {
+      "username": "Irvin Ruiz",
+      "email": "iruiz@gmail.com",
+      "password": "password07"
+    }
+  ]
+  
