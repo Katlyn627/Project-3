@@ -1,4 +1,4 @@
-.container {
+/* .container {
     margin-top: 5px;
     margin-left: 0px;
 }
@@ -20,4 +20,8 @@
 
 .form-control {
     border: 1px solid #656D4A;
+} */
+
+.navbar .navbar-expand-lg .navbar-light {
+    
 }
