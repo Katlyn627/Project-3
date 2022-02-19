@@ -46,9 +46,8 @@ const CommentForm = ({ thoughtId }) => {
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
-            }`}
+            className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''
+              }`}
           >
             Character Count: {characterCount}/280
             {error && <span className="ml-2">{error.message}</span>}
@@ -76,11 +75,11 @@ const CommentForm = ({ thoughtId }) => {
           </form>
         </>
       ) : (
-        <p>
-          You need to be logged in to share your thoughts on this hike. Please{' '}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
-        </p>
-      )}
+          <p>
+            You need to be logged in to share your thoughts on this hike. Please{' '}
+            <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          </p>
+        )}
     </div>
   );
 };
