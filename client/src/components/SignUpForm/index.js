@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from '@apollo/client';
+import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
 
 import { ADD_USER } from '../../utils/mutations';
 import { QUERY_USER } from '../../utils/queries';
 
+import Auth from '../../utils/auth';
+
 const ProfileForm = () => {
     const [username, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [password, setPwd] = useState('');
 
 
     //// This is where im having issues.... referencing the right structure for user query and add user mutation
@@ -40,10 +43,14 @@ const ProfileForm = () => {
             const { data } = await addUser({
                 variables: {
                     username,
-                    email
+                    email,
+                    password
                 },
             });
             setName('');
+            setEmail('');
+            setPwd('');
+
         } catch (err) {
             console.error(err);
         }
@@ -51,42 +58,65 @@ const ProfileForm = () => {
 
     const handleChange = (event) => {
         const { username, value } = event.target;
+        const { email, value } = event.target;
+        const { password, value } = event.target;
 
         if (name === 'username' && value.length <= 20) {
             setName('');
             setEmail('');
+            set
         }
     };
-
+    /*Render SignUp page here*/
     return (
 
-        <div class="card-body text-center">
-            <div class="login-card form-container">
-                <h2 class="page-title welcome-font">Come Hike With Us!</h2>
+        <div>
+            <h3>Hike With Us!</h3>
+            <form
+                className="flex-row justify-center justify-space-between-md align-center"
+                onSubmit={handleFormSubmit}
+            >
+                <div className="col-12 col-lg-9">
+                    <textarea
+                        name="username"
+                        placeholder="type in your new username"
+                        value={username}
+                        className="form-input w-100"
+                        style={{ lineHeight: '1.5', resize: 'vertical' }}
+                        onChange={handleChange}
+                    ></textarea>
+                </div>
 
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
-                    </div>
+                <div className="col-12 col-lg-9">
+                    <textarea
+                        name="email"
+                        placeholder="type in your new email"
+                        value={email}
+                        className="form-input w-100"
+                        style={{ lineHeight: '1.5', resize: 'vertical' }}
+                        onChange={handleChange}
+                    ></textarea>
                 </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+
+                <div className="col-12 col-lg-9">
+                    <textarea
+                        name="password"
+                        placeholder="type in a secure password for your account"
+                        value={password}
+                        className="form-input w-100"
+                        style={{ lineHeight: '1.5', resize: 'vertical' }}
+                        onChange={handleChange}
+                    ></textarea>
                 </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+
+
             </form>
-                        </div>
-        Already have an account? <a href="/">Log In</a>
-
-                    </div>
-  );
+            
+        </>
+    );
 };
 
 export default ProfileForm;
