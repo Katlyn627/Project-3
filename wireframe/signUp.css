@@ -1,0 +1,70 @@
+
+:root {
+    --Kombu-Green: #333d29;
+    --Dark-Olive-Green: #656d4a;
+    --Laurel-Green: #a4ac86;
+    --Khaki-Web: #b6ad90;
+    --Russet: #7f4f24;
+    --Logo-Taupe: rgb(230, 217, 165);
+  }
+
+  * {
+      background-color: #CECECE;
+      color:#333d29;
+  }
+
+  div.container
+
+nav .navbar .navbar-expand-lg .navbar-light .bg-light {
+    background-color:var(--Kombu-Green);
+    color:#333d29;
+}
+
+button .navbar-toggler .collapse {
+    background-color: var(--Russet);
+}
+
+.navbar-toggler-icon {
+    background-color: var(--Russet);
+}
+
+.navbar-brand {
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+a.nav-link.active {
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+h2.page-title.welcome-font {
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+label.form-label {
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+input.form-control.me-2 {
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+button.btn.btn-outline-success {
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+/* :hover button.btn.btn-outline-success {
+    background-color: #656d4a;
+} */
+
+button.btn.btn-outline-success {
+    font-family: 'Roboto Serif', sans-serif;
+    color:#333d29;
+    
+    border-color: #333d29;
+}
+
+button.btn.btn-primary {
+    font-family: 'Roboto Serif', sans-serif;
+    background-color: #656d4a;
+    border-color: #333d29;
+}
