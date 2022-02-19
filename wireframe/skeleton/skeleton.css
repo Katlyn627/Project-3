@@ -1,0 +1,23 @@
+.container {
+    margin-top: 5px;
+    margin-left: 0px;
+}
+
+.btn:hover {
+    color: #656D4A;
+}
+
+.btn .btn-outline-warning .btn-lg {
+    color: #656D4A;
+    background-color: #656D4A;
+}
+
+.input-text:focus {
+    box-shadow: 0px 0px 0px;
+    border-color: #656D4A;
+    outline: 0px;
+}
+
+.form-control {
+    border: 1px solid #656D4A;
+}
