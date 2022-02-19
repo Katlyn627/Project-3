@@ -11,6 +11,29 @@
 
     <title>Sike Hike</title>
 </head>
+<!-- the DIV that will contain the widget -->
+<div class="weatherWidget" ></div>
+
+<script>
+   window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+   window.weatherWidgetConfig.push({
+       selector:".weatherWidget",
+       apiKey:"M6NSXCS3GWMV8YH3AND8WM2H3",
+       location:"Denver, Co",
+       unitGroup:"us",
+       forecastDays:5,
+       title:"Weather",
+       showTitle:true, 
+       showConditions:true
+   });
+  
+   (function() {
+   var d = document, s = d.createElement('script');
+   s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+   s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+   })();
+</script>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
