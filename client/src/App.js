@@ -10,13 +10,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 
-import Header from './components/Header/Header';
+// import Header from './components/Header/Header';
 import Profile from './components/Profile/Profile';
-import CommentForm from './components/CommentForm/Comment';
-import CommentList from './components/CommentList/List';
-import HikeForm from './components/HikeForm/Hike';
-import SignUpFrom from './components/SignUpForm/SignUp';
-import LogInForm from './components/LogInForm/LogIn';
+// import CommentForm from './components/CommentForm/Comment';
+// import CommentList from './components/CommentList/List';
+// import HikeForm from './components/HikeForm/Hike';
+import SignUpFrom from './components/SignUpForm';
+// import LogInForm from './components/LogInForm/LogIn';
 
 
 const httpLink = createHttpLink({
@@ -46,34 +46,22 @@ function App() {
         <ApolloProvider client={client}>
             <Router>
                 <div className="flex-column justify-flex-start min-100-vh">
-                    <Header />
+                    {/* <Header /> */}
                     <div className="container">
                         <Route exact path="/">
-                            <Home />
+                            {/* <Home /> */}
                         </Route>
-                        <Route exact path="/login" component={LogInForm} >
-                            <Login />
-                        </Route>
-                        <Route exact path="/signup" component={SignUpFrom}>
-                            <Signup />
-                        </Route>
-                        <Route exact path="/profile/:profileId" component={Profile}>
-                            <Profile />
-                        </Route>
-                        <Route exact path="/favorites" component={Favorites}>
-                            <Favorites />
-                        </Route>
-                        <Route exact path="/commentform" component={CommentForm}>
-                            <CommentForm />
-                        </Route>
-                        <Route exact path="/commentlist" component={CommentList}>
-                            <CommentList />
-                        </Route>
-                        <Route exact path="/hikeform" component={HikeForm}>
+                        {/* <Route exact path="/login" component={LogInForm} /> */}
+                        <Route exact path="/signup" component={SignUpFrom}/>
+                        <Route exact path="/profile/:profileId" component={Profile}/>
+                        {/* <Route exact path="/favorites" component={Favorites}/> */}
+                        {/* <Route exact path="/commentform" component={CommentForm}/>
+                        <Route exact path="/commentlist" component={CommentList}/> */}
+                        {/* <Route exact path="/hikeform" component={HikeForm}>
                             <HikeForm />
-                        </Route>
+                        </Route> */}
                     </div>
-                    <Footer />
+                    {/* <Footer /> */}
                 </div>
             </Router>
         </ApolloProvider>
