@@ -57,15 +57,15 @@ const ProfileForm = () => {
     };
 
     const handleChange = (event) => {
-        const { username, value } = event.target;
-        const { email, value } = event.target;
-        const { password, value } = event.target;
+        // const { username, value } = event.target;
+        // const { email, value } = event.target;
+        // const { password, value } = event.target;
 
-        if (name === 'username' && value.length <= 20) {
-            setName('');
-            setEmail('');
-            set
-        }
+        // if (name === 'username' && value.length <= 20) {
+        //     setName('');
+        //     setEmail('');
+        //     set
+        // }
     };
     /*Render SignUp page here*/
     return (
@@ -114,8 +114,9 @@ const ProfileForm = () => {
 
 
             </form>
+            </div>
             
-        </>
+       
     );
 };
 
