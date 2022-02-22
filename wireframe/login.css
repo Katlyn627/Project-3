@@ -1,0 +1,45 @@
+:root {
+    --Kombu-Green: #333d29;
+    --Dark-Olive-Green: #656d4a;
+    --Laurel-Green: #a4ac86;
+    --Khaki-Web: #b6ad90;
+    --Russet: #7f4f24;
+    --Logo-Taupe: rgb(230, 217, 165);
+  }
+  * {
+      background-color: #333d29;
+      color: #333d29;
+  }
+  
+  .navbar navbar-expand-lg navbar-light bg-light {
+      background-color: var(--Laurel-Green);
+  }
+  
+  .navbar-brand {
+    font-family: 'Roboto Serif', sans-serif;
+  }
+
+a.nav-link.active {
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+.page-title.welcome-font {
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+.btn.btn-info.btn-block {
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+.form-group{
+    background-color: var(--Khaki-Web);
+    padding: 1rem;
+}
+
+.weatherWidget {
+    padding-top: 4rem;
+    height: auto;
+    width: auto;
+    position: relative;
+}
+
