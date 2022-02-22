@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {
     ApolloClient,
     InMemoryCache,
@@ -6,17 +7,17 @@ import {
     createHttpLink,
 } from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-
+// IMPORT COMPONENTS HERE!!!
 
 // import Header from './components/Header/Header';
 import Profile from './components/Profile/Profile';
 // import CommentForm from './components/CommentForm/Comment';
 // import CommentList from './components/CommentList/List';
 // import HikeForm from './components/HikeForm/Hike';
-import SignUpForm from './components/SignUpForm';
-// import LogInForm from './components/LogInForm/LogIn';
+import Home from './components/Home/home'
+// import Dashboard from './components/Dashboard/dashboard'
+import LogInForm from './components/LogInSignUp/LogInFrom';
 
 
 const httpLink = createHttpLink({
@@ -41,30 +42,29 @@ const client = new ApolloClient({
     cache: new InMemoryCache(),
 });
 
+
+/// ADD ROUTES TO ALL COMPONENTS HERE
 function App() {
     return (
         <ApolloProvider client={client}>
+
+
             <Router>
-                <div className="flex-column justify-flex-start min-100-vh">
-                    {/* <Header /> */}
-                    <div className="container">
-                        <Route exact path="/">
-                            {/* <Home /> */}
-                        </Route>
-                        {/* <Route exact path="/login" component={LogInForm} /> */}
-                        <Route exact path="/signup" component={SignUpForm} />
-                        <Route exact path="/Profile/:profileId" component={Profile} />
-                        {/* <Route exact path="/favorites" component={Favorites}/> */}
-                        {/* <Route exact path="/commentform" component={CommentForm}/>
-                        <Route exact path="/commentlist" component={CommentList}/> */}
-                        {/* <Route exact path="/hikeform" component={HikeForm}>
-                            <HikeForm />
-                        </Route> */}
-                    </div>
-                    {/* <Footer /> */}
+                <div>
+
+                    <Switch>
+
+
+                        <Route path='/' component={Home} />
+                        <Route path='/login' component={LogInForm} />
+                        <Route path='/signup' component={SignUpForm} />
+                    </Switch>
                 </div>
+
+
             </Router>
-        </ApolloProvider>
+
+        </ApolloProvider >
     );
 }
 
