@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 // import Header from './components/Header/Header';
-import Profile from './components/Profile/Profile';
+import Profile from './components/Profile';
 // import CommentForm from './components/CommentForm/Comment';
 // import CommentList from './components/CommentList/List';
 // import HikeForm from './components/HikeForm/Hike';
