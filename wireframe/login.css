@@ -41,5 +41,6 @@ a.nav-link.active {
     height: auto;
     width: auto;
     position: relative;
+    padding: auto;
 }
 
