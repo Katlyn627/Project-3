@@ -5,7 +5,7 @@ import {
     ApolloProvider,
     createHttpLink,
 } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+// import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
@@ -15,7 +15,7 @@ import Profile from './components/Profile/Profile';
 // import CommentForm from './components/CommentForm/Comment';
 // import CommentList from './components/CommentList/List';
 // import HikeForm from './components/HikeForm/Hike';
-import SignUpFrom from './components/SignUpForm';
+import SignUpForm from './components/SignUpForm';
 // import LogInForm from './components/LogInForm/LogIn';
 
 
@@ -52,8 +52,8 @@ function App() {
                             {/* <Home /> */}
                         </Route>
                         {/* <Route exact path="/login" component={LogInForm} /> */}
-                        <Route exact path="/signup" component={SignUpFrom}/>
-                        <Route exact path="/profile/:profileId" component={Profile}/>
+                        <Route exact path="/signup" component={SignUpForm} />
+                        <Route exact path="/Profile/:profileId" component={Profile} />
                         {/* <Route exact path="/favorites" component={Favorites}/> */}
                         {/* <Route exact path="/commentform" component={CommentForm}/>
                         <Route exact path="/commentlist" component={CommentList}/> */}

@@ -8,8 +8,8 @@ import { QUERY_USER } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 
-const ProfileForm = () => {
-    const [username, setName] = useState('');
+const SignUpForm = () => {
+
     const [email, setEmail] = useState('');
     const [password, setPwd] = useState('');
 
@@ -28,13 +28,10 @@ const ProfileForm = () => {
                 console.error(e);
             }
             // update user object's cache
-            const { user } = cache.readQuery({ query: QUERY_USER });
-            cache.writeQuery({
-                query: QUERY_USER,
-                data: { user: { ...user, addUser } },
-            });
+
         },
     });
+
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
@@ -42,12 +39,11 @@ const ProfileForm = () => {
         try {
             const { data } = await addUser({
                 variables: {
-                    username,
                     email,
                     password
                 },
             });
-            setName('');
+
             setEmail('');
             setPwd('');
 
@@ -56,17 +52,16 @@ const ProfileForm = () => {
         }
     };
 
-    const handleChange = (event) => {
-        // const { username, value } = event.target;
-        // const { email, value } = event.target;
-        // const { password, value } = event.target;
+    // const handleChange = (event) => {
+    // const { username, value } = event.target;
+    // const { email, value } = event.target;
+    // const { password, value } = event.target;
 
-        // if (name === 'username' && value.length <= 20) {
-        //     setName('');
-        //     setEmail('');
-        //     set
-        // }
-    };
+    // if (name === 'username' && value.length <= 20) {
+    //     setName('');
+    //     setEmail('');
+    //     set
+    // }
     /*Render SignUp page here*/
     return (
 
@@ -114,10 +109,11 @@ const ProfileForm = () => {
 
 
             </form>
-            </div>
-            
-       
+        </div>
+
+
     );
 };
 
-export default ProfileForm;
+
+export default SignUpForm;
