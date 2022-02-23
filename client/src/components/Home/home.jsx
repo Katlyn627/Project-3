@@ -43,13 +43,13 @@ const HomePage = () => {
                 id="login-button"
                 onClick={() => renderFormHandler("login")}
               >
-                Sign In Instead
+                Get Hiking
               </button>
               <button
                 id="signup-button"
                 onClick={() => renderFormHandler("signup")}
               >
-                Get Hiking
+                Sing In Instead
               </button>
               <p>
                 You need to be logged in to participate. Please{" "}

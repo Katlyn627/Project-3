@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
 
-import { ADD_THOUGHT } from '../../utils/mutations';
-import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
+import { ADD_THOUGHT } from "../../utils/mutations";
+import { QUERY_THOUGHTS, QUERY_ME } from "../../utils/queries";
 
-import Auth from '../../utils/auth';
+import Auth from "../../utils/auth";
 
 const ThoughtForm = () => {
-  const [thoughtText, setThoughtText] = useState('');
+  const [formState, setFormState] = useState({
+    thoughtText: "",
+    thoughtAuthor: "",
+  });
 
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -39,13 +42,12 @@ const ThoughtForm = () => {
 
     try {
       const { data } = await addThought({
-        variables: {
-          thoughtText,
-          thoughtAuthor: Auth.getProfile().data.username,
-        },
+        variables: { ...formState },
       });
-
-      setThoughtText('');
+      setFormState({
+        thoughtText: "",
+        thoughtAuthor: "",
+      });
     } catch (err) {
       console.error(err);
     }
@@ -54,21 +56,24 @@ const ThoughtForm = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'thoughtText' && value.length <= 280) {
-      setThoughtText(value);
+    if (name === "thoughtText" && value.length <= 280) {
+      setFormState({ ...formState, [name]: value });
       setCharacterCount(value.length);
+    } else if (name !== "thoughtText") {
+      setFormState({ ...formState, [name]: value });
     }
   };
 
   return (
     <div>
-      <h3>What did you think of this hike?</h3>
+      <h3>Share your hikes</h3>
 
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''
-              }`}
+            className={`m-0 ${
+              characterCount === 280 || error ? "text-danger" : ""
+            }`}
           >
             Character Count: {characterCount}/280
           </p>
@@ -80,9 +85,9 @@ const ThoughtForm = () => {
               <textarea
                 name="thoughtText"
                 placeholder="Here's a new thought..."
-                value={thoughtText}
+                // value={thoughtText}
                 className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                style={{ lineHeight: "1.5", resize: "vertical" }}
                 onChange={handleChange}
               ></textarea>
             </div>
@@ -100,11 +105,11 @@ const ThoughtForm = () => {
           </form>
         </>
       ) : (
-          <p>
-            You need to be logged in to share your thoughts. Please{' '}
-            <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
-          </p>
-        )}
+        <p>
+          You need to be logged in to share your thoughts. Please{" "}
+          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+        </p>
+      )}
     </div>
   );
 };
