@@ -11,7 +11,7 @@ import { setContext } from '@apollo/client/link/context';
 // IMPORT COMPONENTS HERE!!!
 
 // import Header from './components/Header/Header';
-// import Profile from './components/Profile/Profile';
+
 // import CommentForm from './components/CommentForm/Comment';
 // import CommentList from './components/CommentList/List';
 // import HikeForm from './components/HikeForm/Hike';
