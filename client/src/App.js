@@ -19,6 +19,7 @@ import Home from './components/Home/home'
 // import Dashboard from './components/Dashboard/dashboard'
 import LogInForm from './components/LogInSignUp/LogInForm';
 import SignUpForm from './components/LogInSignUp/SignUpForm';
+import ThoughtForm from './components/ThoughtForm/thoughtForm';
 
 
 const httpLink = createHttpLink({
@@ -59,6 +60,7 @@ function App() {
                         <Route path='/' component={Home} />
                         <Route path='/login' component={LogInForm} />
                         <Route path='/signup' component={SignUpForm} />
+                        <Route path='/thoughts' component={ThoughtForm} />
                     </Switch>
                 </div>
 

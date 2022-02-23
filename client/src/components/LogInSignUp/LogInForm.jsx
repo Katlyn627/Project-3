@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 import "./LogInSignUp.css";
@@ -12,10 +12,6 @@ const LogInForm = () => {
   });
 
   const [login, { error, data }] = useMutation(LOGIN_USER);
-
-  //   useEffect(() => {
-  //     error ? setShowAlert(true) : setShowAlert(false);
-  //   }, [error]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
