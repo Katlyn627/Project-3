@@ -11,8 +11,9 @@ import { setContext } from '@apollo/client/link/context';
 // IMPORT COMPONENTS HERE!!!
 
 // import Header from './components/Header/Header';
-// import Profile from './components/Profile/Profile';
 
+// import CommentForm from './components/CommentForm/Comment';
+// import CommentList from './components/CommentList/List';
 // import HikeForm from './components/HikeForm/Hike';
 import Home from './components/Home/home'
 // import Dashboard from './components/Dashboard/dashboard'
@@ -59,7 +60,7 @@ function App() {
                         <Route path='/' component={Home} />
                         <Route path='/login' component={LogInForm} />
                         <Route path='/signup' component={SignUpForm} />
-                        <Route path='/Thoughts' component={ThoughtForm} />
+                        <Route path='/thoughts' component={ThoughtForm} />
                     </Switch>
                 </div>
 
