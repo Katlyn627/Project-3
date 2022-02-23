@@ -12,13 +12,13 @@ import { setContext } from '@apollo/client/link/context';
 
 // import Header from './components/Header/Header';
 // import Profile from './components/Profile/Profile';
-// import CommentForm from './components/CommentForm/Comment';
-// import CommentList from './components/CommentList/List';
+
 // import HikeForm from './components/HikeForm/Hike';
 import Home from './components/Home/home'
 // import Dashboard from './components/Dashboard/dashboard'
 import LogInForm from './components/LogInSignUp/LogInForm';
 import SignUpForm from './components/LogInSignUp/SignUpForm';
+import ThoughtForm from './components/ThoughtForm/thoughtForm';
 
 
 const httpLink = createHttpLink({
@@ -59,6 +59,7 @@ function App() {
                         <Route path='/' component={Home} />
                         <Route path='/login' component={LogInForm} />
                         <Route path='/signup' component={SignUpForm} />
+                        <Route path='/Thoughts' component={ThoughtForm} />
                     </Switch>
                 </div>
 
