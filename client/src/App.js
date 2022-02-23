@@ -6,18 +6,19 @@ import {
     ApolloProvider,
     createHttpLink,
 } from '@apollo/client';
-// import { setContext } from '@apollo/client/link/context';
+import { setContext } from '@apollo/client/link/context';
 
 // IMPORT COMPONENTS HERE!!!
 
 // import Header from './components/Header/Header';
-import Profile from './components/Profile';
+
 // import CommentForm from './components/CommentForm/Comment';
 // import CommentList from './components/CommentList/List';
 // import HikeForm from './components/HikeForm/Hike';
 import Home from './components/Home/home'
 // import Dashboard from './components/Dashboard/dashboard'
-import LogInForm from './components/LogInSignUp/LogInFrom';
+import LogInForm from './components/LogInSignUp/LogInForm';
+import SignUpForm from './components/LogInSignUp/SignUpForm';
 
 
 const httpLink = createHttpLink({
