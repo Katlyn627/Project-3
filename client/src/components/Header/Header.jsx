@@ -9,6 +9,8 @@ const Header = () => {
         </h1>
         <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
           Meet your new hiking friends.
+
+        {/* adding fixing */}
         </p>
       </div>
     </header>
