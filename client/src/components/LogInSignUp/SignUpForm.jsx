@@ -128,7 +128,7 @@ const SignupForm = () => {
           variant='success'>
           Submit
         </Button>
-        <Link>Sign Up</Link>
+        <Link to="/signup">Sign Up</Link>
       </Form>
     </>
   );
