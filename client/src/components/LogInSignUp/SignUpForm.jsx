@@ -3,6 +3,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
+import { Link } from "react-router-dom";
 
 const SignupForm = () => {
   // set initial form state
@@ -127,6 +128,7 @@ const SignupForm = () => {
           variant='success'>
           Submit
         </Button>
+        <Link>Sign Up</Link>
       </Form>
     </>
   );

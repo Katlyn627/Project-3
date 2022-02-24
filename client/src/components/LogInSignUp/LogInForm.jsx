@@ -4,7 +4,7 @@ import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 import "./LogInSignUp.css";
 import Auth from "../../utils/auth";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const LogInForm = () => {
   const [userFormData, setUserFormData] = useState({
@@ -93,6 +93,7 @@ const LogInForm = () => {
         >
           Submit
         </Button>
+        <Link>Login</Link>
       </Form>
     </>
   );
