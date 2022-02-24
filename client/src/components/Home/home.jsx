@@ -1,8 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
 import LogInForm from "../LogInSignUp/LogInForm";
 import SignUpForm from "../LogInSignUp/SignUpForm";
 import { Link } from "react-router-dom";
-// import './home.css'
+import './Home.css';
+
+// Joana's code starts here
+
+class Home extends Component {
+  render() {
+    return{
+      
+    }
+  }
+}
+
 const HomePage = () => {
   const [renderForm, setRenderForm] = useState("home");
 
@@ -49,7 +60,7 @@ const HomePage = () => {
                 id="signup-button"
                 onClick={() => renderFormHandler("signup")}
               >
-                Sing In Instead
+                Sign In Instead
               </button>
               <p>
                 You need to be logged in to participate. Please{" "}
