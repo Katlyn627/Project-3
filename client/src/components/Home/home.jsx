@@ -2,17 +2,17 @@ import React, { useState, useEffect, Component } from "react";
 import LogInForm from "../LogInSignUp/LogInForm";
 import SignUpForm from "../LogInSignUp/SignUpForm";
 import { Link } from "react-router-dom";
-import './Home.css';
+import "./Home.css";
 
 // Joana's code starts here
 
-class Home extends Component {
-  render() {
-    return{
-      
-    }
-  }
-}
+// class Home extends Component {
+//   render() {
+//     return{
+
+//     }
+//   }
+// }
 
 const HomePage = () => {
   const [renderForm, setRenderForm] = useState("home");
