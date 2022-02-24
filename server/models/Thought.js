@@ -6,12 +6,12 @@ const thoughtSchema = new Schema({
     id: {
         type: Number
     },
-    thoguhtTitle: {
-        type: string,
+    thoughtTitle: {
+        type: String,
         required: true,
     },
     thoughtText: {
-        type: string,
+        type: String,
         required: true,
     },
 });
