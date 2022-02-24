@@ -10,7 +10,7 @@ import { setContext } from '@apollo/client/link/context';
 
 // IMPORT COMPONENTS HERE!!!
 
-// import Header from './components/Header/Header';
+import Header from './components/Header/Header.jsx';
 
 // import CommentForm from './components/CommentForm/Comment';
 // import CommentList from './components/CommentList/List';
@@ -49,11 +49,10 @@ const client = new ApolloClient({
 function App() {
     return (
         <ApolloProvider client={client}>
-
-
+            
             <Router>
                 <div>
-
+                <Header />
                     <Switch>
 
 
