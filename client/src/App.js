@@ -56,10 +56,10 @@ function App() {
                     <Switch>
 
 
-                        <Route path='/' component={Home} />
-                        <Route path='/login' component={LogInForm} />
-                        <Route path='/signup' component={SignUpForm} />
-                        <Route path='/thoughts' component={ThoughtForm} />
+                        <Route exact path='/' component={Home} />
+                        <Route exact path='/login' component={LogInForm} />
+                        <Route exact path='/signup' component={SignUpForm} />
+                        <Route exact path='/thoughts' component={ThoughtForm} />
                     </Switch>
                 </div>
 

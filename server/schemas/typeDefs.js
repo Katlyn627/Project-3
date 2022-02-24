@@ -35,6 +35,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addThought(thoughtText: String!): Thought
     removeThought(thoughtId: ID!): Thought
+    }
 `;
 
 module.exports = typeDefs;
