@@ -1,4 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
+
+// Joana's code starts here
+
+class Header extends Component {
+  render() {
+      return(
+        <nav className="NavbarItems">
+          <h1 className="navbar-logo">Sike Hike</h1>
+          <div className="menu-icon">
+          
+          </div>
+          <ul>
+            <li><a href=""></a></li>
+          </ul>
+        </nav>
+      )
+  }
+}
+
+// Joana's code ends here
 
 const Header = () => {
   return (
