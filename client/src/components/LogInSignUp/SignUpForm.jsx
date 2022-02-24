@@ -20,6 +20,9 @@ const SignupForm = () => {
   // eslint-disable-next-line
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
+  console.log("----error---")
+  console.log(error);
+
   useEffect(() => {
     if (error) {
       setShowAlert(true);
@@ -42,18 +45,25 @@ const SignupForm = () => {
 
     // check if form has everything (as per react-bootstrap docs)
     const form = event.currentTarget;
+    console.log("-------------------- handleFormSubmit in Signup Form -----------------");
     if (form.checkValidity() === false) {
+      console.log("----- check Valid is false -----")
       event.preventDefault();
       event.stopPropagation();
     }
 
     try {
+      console.log("##### about to call addUser mutation ###")
       const { data } = await addUser({
         variables: { ...userFormData },
       });
 
+      console.log("########## fetched data returned");
+      console.error(data)
+
       Auth.login(data.addUser.token);
     } catch (err) {
+      console.log("##### error!")
       console.error(err);
     }
 

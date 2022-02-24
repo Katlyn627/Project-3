@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 import "./LogInSignUp.css";
 import Auth from "../../utils/auth";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const LogInForm = () => {
   const [userFormData, setUserFormData] = useState({
@@ -11,21 +12,32 @@ const LogInForm = () => {
     password: "",
   });
 
+
   const [login, { error, data }] = useMutation(LOGIN_USER);
+  const [validated] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
   };
 
+  useEffect(() => {
+    error ? setShowAlert(true) : setShowAlert(false);
+  }, [error]);
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
+    console.log("handleFormsubmit");
+
     try {
       const { data } = await login({ variables: { ...userFormData } });
+      console.log(data);
       Auth.login(data.login.token);
       window.location.assign("/home");
     } catch (err) {
+      console.log("I have an error");
       console.error(err);
     }
 
@@ -86,4 +98,4 @@ const LogInForm = () => {
   );
 };
 
-export default LoginForm;
+export default LogInForm;
