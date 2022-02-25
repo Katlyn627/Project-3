@@ -32,6 +32,8 @@ import ThoughtForm from './components/ThoughtForm/thoughtForm';
 import Dashboard from './components/Dashboard/Dashboard';
 
 
+import Search from './components/SearchBar/SearchBar';
+
 const httpLink = createHttpLink({
     uri: '/graphql',
 });
