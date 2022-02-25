@@ -29,7 +29,7 @@ import Home from './components/Home/home'
 import LogInForm from './components/LogInSignUp/LogInForm';
 import SignUpForm from './components/LogInSignUp/SignUpForm';
 import ThoughtForm from './components/ThoughtForm/thoughtForm';
-import Dashboard from './components/Dashboard/Dashboard';
+import Dashboard from './components/Dashboard/dashboard';
 
 
 import Search from './components/SearchBar/SearchBar';
