@@ -33,7 +33,7 @@ const Dashboard = () => {
                         <div id="home-container">
                             <div>
                                 <div id="home-logo">
-                                    <img src="../img/lofowithwords.png" alt="logo"></img>
+                                    <img src="../img/logowithwords.png" alt="logo"></img>
                                 </div>
                             </div>
 

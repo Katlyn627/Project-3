@@ -30,9 +30,10 @@ import LogInForm from './components/LogInSignUp/LogInForm';
 import SignUpForm from './components/LogInSignUp/SignUpForm';
 import ThoughtForm from './components/ThoughtForm/thoughtForm';
 import Dashboard from './components/Dashboard/dashboard';
+import Profile from './components/Profile/Profile'
 
 
-import Search from './components/SearchBar/SearchBar';
+// import Search from './components/SearchBar/SearchBar';
 
 const httpLink = createHttpLink({
     uri: '/graphql',
@@ -72,6 +73,7 @@ function App() {
                         <Route exact path='/login' component={LogInForm} />
                         <Route exact path='/signup' component={SignUpForm} />
                         <Route exact path='/thoughts' component={ThoughtForm} />
+                        <Route exact path='/profile' component={Profile} />
                         <Route exact path='/dashboard' component={Dashboard} />
                     </Switch>
                 </div>

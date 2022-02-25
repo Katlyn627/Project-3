@@ -4,6 +4,7 @@ function App() {
         console.log("test")
         getHike()
     }, [])
+    
     //api call function
     function getHike() {
         fetch('https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=94HrMZasixLsS8y0uUuB6DpcI8Dc6abmNlhnZXBR')
