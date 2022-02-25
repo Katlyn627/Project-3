@@ -22,7 +22,7 @@ const SignupForm = () => {
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
   console.log("----error---")
-  console.log(error);
+  // console.log(error);
 
   useEffect(() => {
     if (error) {
