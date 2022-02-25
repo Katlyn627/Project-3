@@ -10,13 +10,8 @@ import { setContext } from '@apollo/client/link/context';
 
 // IMPORT COMPONENTS HERE!!!
 
-// import Header from './components/Header/Header.jsx';
 
-// import CommentForm from './components/CommentForm/Comment';
-// import CommentList from './components/CommentList/List';
-// import HikeForm from './components/HikeForm/Hike';
 import Home from './components/Home/home'
-// import Dashboard from './components/Dashboard/dashboard'
 import LogInForm from './components/LogInSignUp/LogInForm';
 import SignUpForm from './components/LogInSignUp/SignUpForm';
 import ThoughtForm from './components/ThoughtForm/thoughtForm';
