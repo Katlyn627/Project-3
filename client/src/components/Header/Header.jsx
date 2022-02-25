@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // import React, { Component } from 'react';
 
 // // Joana's code starts here
@@ -8,6 +9,34 @@
 //         <nav className="NavbarItems">
 //           <h1 className="navbar-logo">Sike Hike</h1>
 //           <div className="menu-icon">
+=======
+import React, { Component } from 'react';
+import { NavbarItems } from "./NavbarItems"
+import logo from 'client/public/img/logo.png';
+// Joana's code starts here
+
+class Header extends Component {
+  render() {
+      return(
+        <nav className="NavbarItems">
+          <h1 className="navbar-logo">Sike Hike<i className={logo}></i></h1>
+          <div className="menu-icon">
+
+          </div>
+          <ul>
+            {NavbarItems.map((item, index) => {
+                return (
+                  <li key={index}><a className={item.cName} href={item.url}>
+                    {item.title}
+                    </a></li>
+                )
+            })} 
+          </ul>
+        </nav>
+      )
+  }
+}
+>>>>>>> Stashed changes
 
 //           </div>
 //           <ul>
