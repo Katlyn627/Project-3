@@ -15,5 +15,8 @@
   "homepage": "https://github.com/Katlyn627/Sike-Hike#readme",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.1.17"
   }
 }
