@@ -58,7 +58,7 @@ const client = new ApolloClient({
 
 
 /// ADD ROUTES TO ALL COMPONENTS HERE
-
+function App() {
     return (
         <ApolloProvider client={client}>
 
@@ -81,6 +81,6 @@ const client = new ApolloClient({
 
         </ApolloProvider >
     );
-    }
+}
 
 export default App;
