@@ -10,7 +10,7 @@ import { setContext } from '@apollo/client/link/context';
 
 // IMPORT COMPONENTS HERE!!!
 
-import Header from './components/Header/Header.jsx';
+// import Header from './components/Header/Header.jsx';
 
 // import CommentForm from './components/CommentForm/Comment';
 // import CommentList from './components/CommentList/List';
