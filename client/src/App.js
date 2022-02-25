@@ -1,3 +1,19 @@
+// return (
+//     <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
+//         <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
+//             <h1 className="m-0" style={{ fontSize: '3rem' }}>
+//                 Sike Hike
+//             </h1>
+//             <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
+//                 Meet your new hiking friends.
+
+//                 {/* adding fixing */}
+//             </p>
+//         </div>
+//     </header>
+// );
+
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {
@@ -15,6 +31,7 @@ import Home from './components/Home/home'
 import LogInForm from './components/LogInSignUp/LogInForm';
 import SignUpForm from './components/LogInSignUp/SignUpForm';
 import ThoughtForm from './components/ThoughtForm/thoughtForm';
+import Dashboard from './components/Dashboard/dashboard';
 
 
 const httpLink = createHttpLink({
@@ -55,6 +72,7 @@ function App() {
                         <Route exact path='/login' component={LogInForm} />
                         <Route exact path='/signup' component={SignUpForm} />
                         <Route exact path='/thoughts' component={ThoughtForm} />
+                        <Route exact path='/dashboard' component={Dashboard} />
                     </Switch>
                 </div>
 
