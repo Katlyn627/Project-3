@@ -1,15 +1,4 @@
-<<<<<<< Updated upstream
-// import React, { Component } from 'react';
 
-// // Joana's code starts here
-
-// class Header extends Component {
-//   render() {
-//       return(
-//         <nav className="NavbarItems">
-//           <h1 className="navbar-logo">Sike Hike</h1>
-//           <div className="menu-icon">
-=======
 import React, { Component } from 'react';
 import { NavbarItems } from "./NavbarItems"
 import logo from 'client/public/img/logo.png';
@@ -36,18 +25,8 @@ class Header extends Component {
       )
   }
 }
->>>>>>> Stashed changes
 
-//           </div>
-//           <ul>
-//             <li><a href=""></a></li>
-//           </ul>
-//         </nav>
-//       )
-//   }
-// }
-
-// // Joana's code ends here
+// Joana's code ends here
 
 // const Header = () => {
 //   return (

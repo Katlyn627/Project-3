@@ -20,3 +20,10 @@ const SearchBar = () => (
 );
 
 export default SearchBar;
+
+const Hikes = [
+    { id: '1', name: 'Colorado Hike 1' },
+    { id: '2', name: 'Colorado Hike 2' },
+    { id: '3', name: 'Colorado Hike 3' },
+    { id: '4', name: 'Colorado Hike 4' },
+];

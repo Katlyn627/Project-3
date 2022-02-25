@@ -31,8 +31,25 @@ import SignUpForm from './components/LogInSignUp/SignUpForm';
 import ThoughtForm from './components/ThoughtForm/thoughtForm';
 import Dashboard from './components/Dashboard/Dashboard';
 
-
+// Joana's Search Bar Code
 import Search from './components/SearchBar/SearchBar';
+
+const App = () => {
+    return (
+        <div>
+        <Search />
+        <ul>
+            {Hikes.map((post) => (
+                <li key={Hikes.id}>{Hikes.name}</li>
+            ))}
+        </ul>
+        </div>
+    );
+}
+
+export default App;
+// End of Joana's Search Bar code
+
 
 const httpLink = createHttpLink({
     uri: '/graphql',
