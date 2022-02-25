@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import SignupForm from "../LogInSignUp/SignUpForm";
 import "./dashboard.css";
-
 //dashboard
 // dashboard,
 //     title,
@@ -12,7 +11,6 @@ import "./dashboard.css";
 //dashboard
 const Dashboard = () => {
     const [renderForm, setRenderForm] = useState("dashboard");
-
     const renderFormHandler = (page) => {
         setRenderForm(page);
     };
@@ -26,6 +24,9 @@ const Dashboard = () => {
                 < profilePage renderForm={renderForm} setRenderForm={setRenderForm} />
             );
         } else if (renderForm === "dashboard") {
+
+            console.log("test")
+
             return (
                 <>
                     <div id="main-home-container">
