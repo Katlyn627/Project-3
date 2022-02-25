@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SignupForm from "../LogInSignUp/SignUpForm";
+// import SignupForm from "../LogInSignUp/SignUpForm";
 import "./dashboard.css";
 
 //dashboard
@@ -10,7 +10,7 @@ import "./dashboard.css";
 //     showUsername = true,
 
 //dashboard
-const dashboard = () => {
+const Dashboard = () => {
     const [renderForm, setRenderForm] = useState("dashboard");
 
     const renderFormHandler = (page) => {
@@ -62,4 +62,4 @@ const dashboard = () => {
     };
     return renderPage();
 };
-export default dashboard;
+export default Dashboard;
