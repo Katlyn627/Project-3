@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SignupForm from "../LogInSignUp/SignUpForm";
 import "./dashboard.css";
 
-
+//dashboard
 dashboard,
     title,
     showTitle = true,
