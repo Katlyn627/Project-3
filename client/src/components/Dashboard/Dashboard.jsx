@@ -5,7 +5,7 @@ import SearchBar from '../SearchBar/SearchBar'
 import "./dashboard.css";
 import logowithwords from '../../img/logowithwords.png'
 // import dashboarbackground from '../../img/dashboarbackground'
-import { getHike } from '../../utils/API';
+import  {getHike}  from '../../utils/API';
 //dashboard
 // dashboard,
 //     title,
