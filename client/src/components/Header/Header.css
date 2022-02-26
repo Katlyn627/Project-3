@@ -1,6 +1,7 @@
+
 .NavbarItems {
     height: 100px;
-    background-color: rgb(8, 44, 8);
+    background-color: #0E402D;
     padding: 0px 24px;
     display: flex;
     justify-content: space-between;
@@ -8,7 +9,7 @@
 }
 
 .NavbarItems h1 {
-    color: white;
+    color: #CFD2CC;
 }
 
 .NavbarItems ul {
@@ -22,7 +23,8 @@
 }
 
 .NavbarItems ul li a {
-    color: white;
+    color: #CFD2CC;
     text-decoration: none;
     margin: 0px 10px;
 }
+

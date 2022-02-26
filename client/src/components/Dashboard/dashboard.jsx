@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import SearchBar from '../SearchBar/SearchBar'
 import "./dashboard.css";
 import logwithwords from '../../img/logowithwords.png'
-
+// import dashboarbackground from '../../img/dashboarbackground'
 import { getHike } from '../../utils/API';
 //dashboard
 // dashboard,
 //     title,
 //     showTitle = true,
 //     showUsername = true,
+
 
 //dashboard
 const Dashboard = () => {
@@ -56,13 +57,16 @@ const Dashboard = () => {
                                 <div id="home-logo">
                                     <img src={logwithwords} alt="logo"></img>
                                 </div>
+                                {/* <div id="background">
+                                    <img src={dashboarbackground} alt="background"></img>
+                                </div> */}
                             </div>
 
                             <p>Sike to Hike!</p>
                         </div>
 
                         <div id="home=buttons">
-                            < Link to="/home">Home</Link>
+
                             <button
                                 id="home-button"
                                 onClick={() => renderFormHandler("home")}

@@ -30,7 +30,7 @@ import LogInForm from './components/LogInSignUp/LogInForm';
 import SignUpForm from './components/LogInSignUp/SignUpForm';
 import ThoughtForm from './components/ThoughtForm/thoughtForm';
 import Dashboard from './components/Dashboard/dashboard';
-import Profile from './components/Profile/Profile'
+import Profile from './components/Profile/Profile';
 //
 import Header from "./components/Header/Header"
 // import Search from './components/SearchBar/SearchBar';

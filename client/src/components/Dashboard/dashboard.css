@@ -1,0 +1,79 @@
+
+#home-button {
+    display: inline-block;
+    padding: 0 1.2em .2em;
+    padding-top: .2em;
+    border: 0.12em solid #0000;
+    margin: 0 1.2em 1.2em 0;
+    border-radius: .5em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: #CFD2CC;
+    font-size: 18px;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    background-color: #000000;
+    text-align: center;
+    transition: all 0.15s;
+    }
+
+#home-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20em;
+}
+
+#home-button:hover {
+    text-shadow: 0 0 100em blue;
+    background-color: darkgray;
+    color: #000000;
+    border-color: #000000;
+}
+
+#profile-button {
+    display: inline-block;
+    padding: 0 1.2em .2em;
+    padding-top: .2em;
+    border: 0.12em solid #0000;
+    margin: 0 1.2em 1.2em 0;
+    border-radius: .5em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: #CFD2CC;
+    font-size: 18px;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    background-color: #000000;
+    text-align: center;
+    transition: all 0.15s;
+    }
+
+#profile-button:hover {
+    text-shadow: 0 0 100em blue;
+    background-color: darkgray;
+    color: #000000;
+    border-color: #000000;
+}
+
+#profile-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+@media all and (max-width:30em) {
+    #home-button, #profile-button {
+        display: block;
+        margin: o.4em auto;
+    }
+}
+
+#home-logo {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 40%;
+}
