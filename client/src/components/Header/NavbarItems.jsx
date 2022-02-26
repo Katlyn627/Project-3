@@ -1,3 +1,5 @@
+import HomePage from "../Home/Home"
+
 export const NavbarItems = [
     {
         title: 'Home',

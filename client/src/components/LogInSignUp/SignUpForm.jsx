@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 
 const SignupForm = () => {
   // set initial form state
-  const [userFormData, setUserFormData] = useState({ 
-    username: '', 
-    email: '', 
-    password: '' 
+  const [userFormData, setUserFormData] = useState({
+    username: '',
+    email: '',
+    password: ''
   });
 
   // set state for form validation
@@ -37,7 +37,7 @@ const SignupForm = () => {
 
     setUserFormData({
       ...userFormData,
-      [name]: value 
+      [name]: value
     });
   };
 
@@ -120,7 +120,9 @@ const SignupForm = () => {
             value={userFormData.password}
             required
           />
-          <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
+          <Form.Control.Feedback type='invalid'>
+            Password is required!
+          </Form.Control.Feedback>
         </Form.Group>
         <Button
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}

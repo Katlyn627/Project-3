@@ -1,11 +1,12 @@
+require('dotenv').config()
 
 
+async function getHike() {
+    const apiKey = process.env.REACT_APP_APIKEY
+    console.log(apiKey);
+    const response = await fetch(`https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=${apiKey}`);
+    const results = await response.json();
+    return results;
+}
 
-    async function getHike() {
-        
-        const response = await fetch('https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=94HrMZasixLsS8y0uUuB6DpcI8Dc6abmNlhnZXBR');
-        const results = await response.json();
-        return results;
-        }
-
-    module.exports={getHike};
+module.exports = { getHike };

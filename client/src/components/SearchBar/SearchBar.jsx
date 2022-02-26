@@ -14,6 +14,7 @@ async function getHikingData(){
 }
     return (
         <div>
+            <div id="searchbar">
             <label htmlFor="header-search">
                 <span className="visually-hidden">Search for Hikes</span>
             </label>
@@ -26,6 +27,7 @@ async function getHikingData(){
             />
             <button onClick={getHikingData} >Search</button> 
         </div>    
+        </div>
     );
 
 
