@@ -90,3 +90,5 @@ const Dashboard = () => {
     return renderPage();
 };
 export default Dashboard;
+
+// fixeing App.js
