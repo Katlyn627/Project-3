@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import SignupForm from "../LogInSignUp/SignUpForm";
+import SearchBar from '../SearchBar/SearchBar'
 import "./dashboard.css";
 //dashboard
 // dashboard,
@@ -29,6 +30,7 @@ const Dashboard = () => {
 
             return (
                 <>
+                <SearchBar />
                     <div id="main-home-container">
                         <div id="home-container">
                             <div>

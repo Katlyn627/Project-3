@@ -1,15 +1,11 @@
-function App() {
-    const [parkData, setParkData] = useState();
-    useEffect(() => {
-        console.log("test")
-        getHike()
-    }, [])
-    
-    //api call function
-    function getHike() {
-        fetch('https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=94HrMZasixLsS8y0uUuB6DpcI8Dc6abmNlhnZXBR')
-            .then(response => response.json())
-            .then(results => {
-                console.log(results)
-                setParkData(results);
-            })
+
+
+
+    async function getHike() {
+        
+        const response = await fetch('https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=94HrMZasixLsS8y0uUuB6DpcI8Dc6abmNlhnZXBR');
+        const results = await response.json();
+        return results;
+        }
+
+    module.exports={getHike};
