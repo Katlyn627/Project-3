@@ -1,0 +1,28 @@
+.NavbarItems {
+    height: 100px;
+    background-color: rgb(8, 44, 8);
+    padding: 0px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NavbarItems h1 {
+    color: white;
+}
+
+.NavbarItems ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavbarItems ul li{
+    list-style: none;
+}
+
+.NavbarItems ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 10px;
+}
