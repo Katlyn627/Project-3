@@ -3,6 +3,7 @@ import LogInForm from "../LogInSignUp/LogInForm";
 import SignUpForm from "../LogInSignUp/SignUpForm";
 import { Link } from "react-router-dom";
 import "./home.css";
+import logowithwords from '../../img/logowithwords.png'
 
 // Joana's code starts here
 
@@ -42,14 +43,14 @@ const HomePage = () => {
             <div id="home-container">
               <div>
                 <div id="home-logo">
-                  <img src="../img/logowithwords.png" alt="logo"></img>
+                  <img src={logowithwords} alt="logo"></img>
                 </div>
               </div>
-
-              <p>Sike to Hike!</p>
+              <div id="home-text">
+                <p>Welcome, lets get Hiking!</p>
+              </div>
             </div>
             <div id="home-login-buttons">
-              <Link to="/login">LogIn</Link>
               <button
                 id="login-button"
                 onClick={() => renderFormHandler("login")}
@@ -62,11 +63,13 @@ const HomePage = () => {
               >
                 Sign In Instead
               </button>
-              <p>
-                You need to be logged in to participate. Please{" "}
-                <Link to="/login">login</Link> or{" "}
-                <Link to="/signup">signup.</Link>
-              </p>
+              <div id="log-statement">
+                <p>
+                  You need to be logged in to participate. Please{" "}
+                  <Link to="/login">login</Link> or{" "}
+                  <Link to="/signup">signup.</Link>
+                </p>
+              </div>
             </div>
           </div>
         </>

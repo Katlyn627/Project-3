@@ -75,5 +75,16 @@
 display: block;
 margin-left: auto;
 margin-right: auto;
-width: 40%;
+width: fit-content;
+}
+
+#text {
+    font-family: sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    color: #0E402D;
+    font-family: sans-serif;
+    font-weight: 700;
 }
