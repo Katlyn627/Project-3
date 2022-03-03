@@ -21,4 +21,14 @@ SO THAT i can filter through hikes that fit me.
 ## Acceptance Criteria
 ```
 
+Given and unauthenticated user
+WHEN I navigate to the website
+THEN I am presented with a main login and sign up page
+IF I have an account, THEN I can login with my authentication
+IF I enter my login credentials, then I am rerouted to the home dashboard, otherwise I receive an error that my email or password is incorrect
+IF I don't have an account, then I can click sign up and be routed to the sign up page
+
+Given an authenticated user
+WHEN I select login, then I am routed to the main dashboard page
+
 ```
